@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Welcome -->
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="com.ccastro.antojatec.ui.auth.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome" >
+
+        <action
+            android:id="@+id/action_welcome_to_registerOption"
+            app:destination="@id/registerOptionFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_welcome_to_loginOption"
+            app:destination="@id/loginOptionFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Login Option -->
+    <fragment
+        android:id="@+id/loginOptionFragment"
+        android:name="com.ccastro.antojatec.ui.auth.LoginOptionFragment"
+        android:label="LoginOptionFragment"
+        tools:layout="@layout/fragment_login_option" >
+
+        <action
+            android:id="@+id/action_loginOption_to_registerOption"
+            app:destination="@id/registerOptionFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_loginOption_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Register Option -->
+    <fragment
+        android:id="@+id/registerOptionFragment"
+        android:name="com.ccastro.antojatec.ui.auth.RegisterOptionFragment"
+        android:label="registerOptionFragment"
+        tools:layout="@layout/fragment_register_option" >
+
+        <action
+            android:id="@+id/action_registerOption_to_register"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_registerOption_to_loginOption"
+            app:destination="@id/loginOptionFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Register -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ccastro.antojatec.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Login -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ccastro.antojatec.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+    </fragment>
+
+    <!-- Otros fragments para doctor, paciente, admin -->
+
+</navigation>

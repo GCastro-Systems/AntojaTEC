@@ -1,0 +1,41 @@
+<resources>
+    <!-- Diseño específico para el logo (solo será llamado cuando se necesite) -->
+    <style name="Image_Logo">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:contentDescription">@string/some_text</item>
+        <item name="android:layout_marginTop">@dimen/margin_m</item>
+        <item name="android:layout_marginBottom">@dimen/margin_s</item>
+    </style>
+
+    <!-- Eslogan y encabezados -->
+    <style name="Text_H1">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+    </style>
+
+
+    <!-- Títulos, menús -->
+    <style name="Text_H2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Subtítulos -->
+    <style name="Text_Subtitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Texto normal -->
+    <style name="Text_Body">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+</resources>

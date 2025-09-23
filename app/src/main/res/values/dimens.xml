@@ -1,3 +1,31 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <!-- Margins -->
+    <dimen name="margin_null">0dp</dimen>
+    <dimen name="margin_xs">4dp</dimen>
+    <dimen name="margin_s">8dp</dimen>
+    <dimen name="margin_m">16dp</dimen>
+    <dimen name="margin_l">24dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+
+    <!-- Screen paddings -->
+    <dimen name="padding_screen_horizontal">24dp</dimen>
+    <dimen name="padding_screen_vertical">32dp</dimen>
+
+    <!-- Inset paddings -->
+    <dimen name="padding_icon_inside">5dp</dimen>
+    <dimen name="padding_icon_special">10dp</dimen>
+
+    <!-- Spacing between form items -->
+    <dimen name="spacing_form_s">8dp</dimen>
+    <dimen name="spacing_form_m">14dp</dimen>
+    <dimen name="spacing_form_l">16dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="spacing_button_top">24dp</dimen>
+    <dimen name="button_height">65dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+
+    <!-- Icons -->
+    <dimen name="icon_size_m">24dp</dimen>
+    <dimen name="icon_size_l">48dp</dimen>
 </resources>
