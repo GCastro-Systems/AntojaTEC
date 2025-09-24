@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.AntojaTEC" parent="Base.Theme.AntojaTEC" />
-</resources>
+    <style name="Shape">
+        <!-- Atributos del estilo -->
+    </style>
+
+                <!-- Otros estilos y temas -->
+
+
+        </resources>

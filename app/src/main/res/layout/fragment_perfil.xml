@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10dp"
+    android:paddingBottom="@dimen/padding_screen_vertical"
+    android:paddingTop="10dp"
+    tools:context="ui.auth.WelcomeFragment">
+
+    <!-- Logo de la imagen -->
+
+    <!-- Eslogan  -->
+
+
+    <TextView
+        android:id="@+id/perfil"
+        style="@style/Text_H1"
+        android:gravity="center"
+        android:text="@string/perfil"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/micuenta"
+        style="@style/Text_H1"
+        android:gravity="center"
+        android:text="@string/mi_cuenta"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <TextView
+        android:id="@+id/direcciones"
+        style="@style/Text_H1"
+        android:gravity="center"
+        android:text="Direcciones"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pedidos"
+        style="@style/ButtonPrimary2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:text="@string/Boton_registrarse_register_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sugerencias"
+        style="@style/ButtonPrimary2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:text="@string/Boton_registrarse_register_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ayuda"
+        style="@style/ButtonPrimary2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/Boton_registrarse_register_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="134dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

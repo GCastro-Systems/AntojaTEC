@@ -1,5 +1,36 @@
 <resources>
-    <string name="app_name">AntojaTEC</string>
-    <string name="some_text">...</string>
-    <string name="slogan_text">Y a ti, ¿qué se te antoja hoy?</string>
+    <string name="nombre">AntojaTEC</string>
+
+    //Welcome
+    <string name="Boton_registrarse">REGISTRARSE GRATIS</string>
+    <string name="Boton_iniciar_sesion">Iniciar Sesion</string>
+    <string name="slogan_text">Tu Comida, Tu Lugar, Tu App</string>
+
+    //register option
+    <string name="inciar_sesion_text">Iniciar sesion en AntojaTec</string>
+    <string name="Boton_registrarse_register_option">CONTINUAR CON TU EMAIL</string>
+    <string name="Boton_iniciar_sesion_register_option">CONTINUAR CON GOOGLE</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta? Registrate</string>
+
+    //register
+    <string name="Boton_crear_cuenta">CREAR CUENTA</string>
+    <string name="Nueva_cuenta">Nueva cuenta</string>
+    <string name="welcome_message2">Hello!</string>
+
+    <string name="welcome_message">Welcome to our app!</string>
+                <!-- En strings.xml -->
+    <string name="titulo_app">Mi Aplicación</string>
+
+    //login_option
+    <string name="iniciar_sesion_ahora">INICIAR SESION</string>
+    <string name="entrer">Nueva cuenta</string>
+    <string name="olvido_contraseña">OLVIDE MI CONTRASEÑA</string>
+
+    //login
+    <string name="registrar">Registrate en AntojaTec</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes cuenta? Registrate</string>
+
+    //perfil
+    <string name="perfil">Perfil</string>
+    <string name="mi_cuenta">Mi cuenta</string>
 </resources>
