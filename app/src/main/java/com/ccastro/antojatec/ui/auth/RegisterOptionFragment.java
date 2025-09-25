@@ -1,6 +1,5 @@
 package com.ccastro.antojatec.ui.auth;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ public class RegisterOptionFragment extends Fragment {
     private Button buttonRegisterOption;
     private Button buttonRegisterWithGoogle;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,
@@ -27,15 +25,23 @@ public class RegisterOptionFragment extends Fragment {
         // Inflar layout
         View view = inflater.inflate(R.layout.fragment_register_option, container, false);
 
-        // Referenciar botón
-        buttonRegisterOption = view.findViewById(R.id.buttonRegisterOption);
-        buttonRegisterWithGoogle = view.findViewById(R.id.buttonRegisterOptionEmail);
+        // Referenciar botones correctamente
+        buttonRegisterOption = view.findViewById(R.id.buttonRegisterOptionEmail); // registrar por email
+        //buttonRegisterWithGoogle = view.findViewById(R.id.buttonRegisterOptionGoogle); // si existe botón Google
 
-        // Navegación al fragment de registro
-        buttonRegisterOption.setOnClickListener(v -> {
-            NavHostFragment.findNavController(this)
-                    .navigate(R.id.registerFragment);
-        });
+        // Navegación al fragment de registro por email
+        buttonRegisterOption.setOnClickListener(v ->
+                NavHostFragment.findNavController(this)
+                        .navigate(R.id.registerFragment)
+        );
+
+        // Opcional: registro con Google
+        if (buttonRegisterWithGoogle != null) {
+            buttonRegisterWithGoogle.setOnClickListener(v -> {
+                // TODO: ...
+            });
+        }
+
         return view;
     }
 }

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ccastro.antojatec.R;
+import com.ccastro.antojatec.data.model.Users;
 import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
 public class LoginFragment extends Fragment {
@@ -39,7 +40,7 @@ public class LoginFragment extends Fragment {
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
 
-            authViewModel.loginUser(email, password).observe(getViewLifecycleOwner(), patient -> {
+            authViewModel.loginUsers(email, password).observe(getViewLifecycleOwner(), patient -> {
                 if (patient != null) {
                     String fullName = patient.getName() + " " + patient.getLastNameFather() + " " + patient.getLastNameMother();
                     Toast.makeText(getContext(), "Bienvenido " + fullName, Toast.LENGTH_SHORT).show();

@@ -26,8 +26,8 @@ public class WelcomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_welcome, container, false);
 
         // Referenciar botón
-        buttonRegister = view.findViewById(R.id.buttonWelcomeRegister);
-        buttonLogin = view.findViewById(R.id.buttonWelcomeLogin);
+        buttonRegister = view.findViewById(R.id.btnWelcomeRegister);
+        buttonLogin = view.findViewById(R.id.btnWelcomeLogin);
 
         // Navegación al fragment de registro
         buttonRegister.setOnClickListener(v -> {

@@ -3,8 +3,11 @@ package com.ccastro.antojatec.data.model;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+
+import java.time.LocalDateTime;
 
 @Entity(
         tableName = "users",
@@ -45,21 +48,28 @@ public class Users {
 
     // Constructor vacío requerido por Room
     public Users() {
-        this.createdAt = java.time.LocalDateTime.now().toString();
+        this.createdAt = LocalDateTime.now().toString();
     }
 
-    // Constructor completo solo para la app
+    // Constructor completo solo para uso de la app
+    @Ignore // <- Esto indica a Room que ignore este constructor
     public Users(@NonNull String name, @NonNull String lastNameFather,
-                    @NonNull String lastNameMother, @NonNull String email,
-                    @NonNull String cellphone, @NonNull String password) {
+                 @NonNull String lastNameMother, @NonNull String email,
+                 @NonNull String cellphone, @NonNull String password) {
 
-        this.name = name.length() > 50 ? name.substring(0, 50) : name;
-        this.lastNameFather = lastNameFather.length() > 50 ? lastNameFather.substring(0, 50) : lastNameFather;
-        this.lastNameMother = lastNameMother.length() > 50 ? lastNameMother.substring(0, 50) : lastNameMother;
-        this.email = email.length() > 100 ? email.substring(0, 100) : email;
-        this.cellphone = cellphone.length() > 15 ? cellphone.substring(0, 15) : cellphone;
+        this.name = truncate(name, 50);
+        this.lastNameFather = truncate(lastNameFather, 50);
+        this.lastNameMother = truncate(lastNameMother, 50);
+        this.email = truncate(email, 100);
+        this.cellphone = truncate(cellphone, 15);
         this.password = password; // validar mínimo 6 caracteres en la app
-        this.createdAt = java.time.LocalDateTime.now().toString();
+        this.createdAt = LocalDateTime.now().toString();
+    }
+
+    // Método auxiliar para truncar cadenas
+    private String truncate(String value, int maxLength) {
+        if (value == null) return "";
+        return value.length() > maxLength ? value.substring(0, maxLength) : value;
     }
 
     // Getters y setters
@@ -68,39 +78,27 @@ public class Users {
 
     @NonNull
     public String getName() { return name; }
-    public void setName(@NonNull String name) {
-        this.name = name.length() > 50 ? name.substring(0, 50) : name;
-    }
+    public void setName(@NonNull String name) { this.name = truncate(name, 50); }
 
     @NonNull
     public String getLastNameFather() { return lastNameFather; }
-    public void setLastNameFather(@NonNull String lastNameFather) {
-        this.lastNameFather = lastNameFather.length() > 50 ? lastNameFather.substring(0, 50) : lastNameFather;
-    }
+    public void setLastNameFather(@NonNull String lastNameFather) { this.lastNameFather = truncate(lastNameFather, 50); }
 
     @NonNull
     public String getLastNameMother() { return lastNameMother; }
-    public void setLastNameMother(@NonNull String lastNameMother) {
-        this.lastNameMother = lastNameMother.length() > 50 ? lastNameMother.substring(0, 50) : lastNameMother;
-    }
+    public void setLastNameMother(@NonNull String lastNameMother) { this.lastNameMother = truncate(lastNameMother, 50); }
 
     @NonNull
     public String getEmail() { return email; }
-    public void setEmail(@NonNull String email) {
-        this.email = email.length() > 100 ? email.substring(0, 100) : email;
-    }
+    public void setEmail(@NonNull String email) { this.email = truncate(email, 100); }
 
     @NonNull
     public String getPassword() { return password; }
-    public void setPassword(@NonNull String password) {
-        this.password = password;
-    }
+    public void setPassword(@NonNull String password) { this.password = password; }
 
     @NonNull
     public String getCellphone() { return cellphone; }
-    public void setCellphone(@NonNull String cellphone) {
-        this.cellphone = cellphone.length() > 15 ? cellphone.substring(0, 15) : cellphone;
-    }
+    public void setCellphone(@NonNull String cellphone) { this.cellphone = truncate(cellphone, 15); }
 
     @NonNull
     public String getCreatedAt() { return createdAt; }

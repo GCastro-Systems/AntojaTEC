@@ -53,13 +53,8 @@ public class AuthViewModel extends AndroidViewModel {
     }
 
 
-    // 🔹 Login de vendedores.
-    /*public LiveData<Doctors> loginDoctor(String email, String password) {
-        MutableLiveData<Doctors> result = new MutableLiveData<>();
-        executor.execute(() -> {
-            Doctors doctor = doctorsRepository.loginDoctor(email, password);
-            result.postValue(doctor);
-        });
-        return result;
-    }*/
+    // 🔹 Login de usuarios.
+    public LiveData<Users> loginUsers(String email, String password) {
+        return usersRepository.loginUsers(email, password);
+    }
 }
