@@ -11,7 +11,7 @@ import com.ccastro.antojatec.data.model.Users;
 public interface UsersDao {
 
     @Insert
-    void registerPatients(Users users);
+    void registerUsers(Users patient);
 
     @Query("SELECT * FROM Users WHERE email = :email AND password = :password LIMIT 1")
     LiveData<Users> login(String email, String password);
