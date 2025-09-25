@@ -10,15 +10,18 @@
     tools:context="ui.auth.WelcomeFragment">
 
     <!-- Logo de la imagen -->
+
+    <!-- Eslogan  -->
+
     <ImageView
         android:id="@+id/imageViewLogo"
         style="@style/Image_Logo"
+        android:layout_marginTop="20dp"
         android:src="@drawable/img_logoapp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Eslogan  -->
 
     <TextView
         android:id="@+id/textViewSlogan"
@@ -32,22 +35,26 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonWelcomeRegister"
-        style="@style/ButtonFill"
-        android:layout_width="0dp"
+        style="@style/ButtonPrimary"
+        android:layout_width="300dp"
         android:layout_height="@dimen/button_height"
-        android:layout_marginBottom="@dimen/spacing_form_s"
-        android:text="@string/some_text"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Boton_registrarse"
         app:layout_constraintBottom_toTopOf="@id/buttonWelcomeLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonWelcomeLogin"
-        style="@style/ButtonOutline"
-        android:layout_width="0dp"
+        style="@style/ButtonOutlinedCustom"
+        android:layout_width="300dp"
         android:layout_height="@dimen/button_height"
-        android:text="@string/some_text"
+        android:layout_marginBottom="60dp"
+        android:text="@string/Boton_iniciar_sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#A91212" />
 </androidx.constraintlayout.widget.ConstraintLayout>

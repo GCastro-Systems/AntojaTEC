@@ -4,7 +4,7 @@
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">200dp</item>
         <item name="android:scaleType">centerInside</item>
-        <item name="android:contentDescription">@string/some_text</item>
+
         <item name="android:layout_marginTop">@dimen/margin_m</item>
         <item name="android:layout_marginBottom">@dimen/margin_s</item>
     </style>
@@ -21,21 +21,103 @@
     <!-- Títulos, menús -->
     <style name="Text_H2">
         <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">@font/roboto_medium</item>
+
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <!-- Subtítulos -->
     <style name="Text_Subtitle">
         <item name="android:textSize">15sp</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
+
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
     <!-- Texto normal -->
     <style name="Text_Body">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
+
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
+
+
+
+
+    <!-- COMPONENTES BOTONES -->
+
+    <style name="ButtonPrimary" parent="Widget.MaterialComponents.Button">
+        <!-- Color de fondo -->
+        <item name="backgroundTint">#9708C7</item>
+
+        <!-- Color del texto -->
+        <item name="android:textColor">@android:color/white</item>
+
+
+        <!-- Texto en mayúsculas automáticas (si quieres desactivarlo, pon false) -->
+        <item name="android:textAllCaps">true</item>
+
+        <!-- Bordes redondeados -->
+        <item name="cornerRadius">50dp</item>
+    </style>
+
+    <style name="ButtonPrimary2" parent="Widget.MaterialComponents.Button">
+        <!-- Color de fondo -->
+        <item name="backgroundTint">#BFBFBF</item>
+
+        <!-- Color del texto -->
+        <item name="android:textColor">@android:color/white</item>
+
+
+        <!-- Texto en mayúsculas automáticas (si quieres desactivarlo, pon false) -->
+        <item name="android:textAllCaps">true</item>
+
+        <!-- Bordes redondeados -->
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <!-- Boton sin fill -->
+    <style name="ButtonOutlinedCustom" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <!-- Fondo blanco -->
+        <item name="backgroundTint">@android:color/white</item>
+
+        <!-- Color del borde -->
+        <item name="strokeColor">@color/purple_500</item>
+        <item name="strokeWidth">2dp</item>
+
+        <!-- Color del texto -->
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
+    <color name="purple_500">#9708C7</color>
+    <color name="grey">#969696</color>
+
+
+    <!-- COMPONENTES AREAS DE TEXTO -->
+    <style name="areasdetexto" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Modo outlined (necesario para ver el stroke) -->
+        <item name="boxBackgroundMode">outline</item>
+
+        <!-- Color de fondo gris -->
+        <item name="boxBackgroundColor">#E4E3E3</item>
+
+        <!-- Color del borde -->
+        <item name="boxStrokeColor">@color/black</item>
+
+        <!-- Grosor del borde (solo funciona en algunas versiones de Material, si no, se controla por tema) -->
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeWidthFocused">3dp</item>
+
+        <!-- Esquinas redondeadas -->
+        <item name="shapeAppearanceOverlay">@style/Shape.Rounded24</item>
+
+        <!-- Color del hint -->
+        <item name="hintTextColor">@color/black</item>
+    </style>
+
+    <style name="Shape.Rounded24">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
 </resources>

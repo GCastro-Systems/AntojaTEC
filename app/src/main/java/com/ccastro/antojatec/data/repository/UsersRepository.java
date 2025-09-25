@@ -20,12 +20,12 @@ public class UsersRepository {
     }
 
     // Registro de paciente
-    public void registerPatient(Users user) {
+    public void registerUser(Users user) {
         executorService.execute(() -> UsersDao.registerPatients(user));
     }
 
     // Inicio de sesión de un paciente
-    public LiveData<Users> loginPatients(String email, String password) {
+    public LiveData<Users> loginUser(String email, String password) {
         return UsersDao.login(email, password);
     }
 
