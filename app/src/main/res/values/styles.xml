@@ -80,8 +80,8 @@
 
     <!-- Logo centrado -->
     <style name="Image_Logo">
-        <item name="android:layout_width">150dp</item>
-        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">180dp</item>
         <item name="android:scaleType">centerInside</item>
         <item name="android:contentDescription">@string/some_text</item>
         <item name="android:layout_marginTop">20dp</item>
