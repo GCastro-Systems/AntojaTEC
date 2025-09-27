@@ -1,36 +1,54 @@
 <resources>
-    <string name="nombre">AntojaTEC</string>
+    <!-- ===================== -->
+    <!-- App General -->
+    <!-- ===================== -->
+    <string name="app_name">AntojaTEC</string>
+    <string name="app_title">Mi Aplicación</string>
+    <string name="some_text">...</string>
 
-    //Welcome
-    <string name="Boton_registrarse">REGISTRARSE GRATIS</string>
-    <string name="Boton_iniciar_sesion">Iniciar Sesion</string>
-    <string name="slogan_text">Tu Comida, Tu Lugar, Tu App</string>
+    <!-- ===================== -->
+    <!-- Welcome / Bienvenida -->
+    <!-- ===================== -->
+    <string name="slogan_text">Consentimos tu anojo, alegramos tu estudio</string>
+    <string name="button_register">Regístrate gratis</string>
+    <string name="button_login">Iniciar sesión</string>
 
-    //register option
-    <string name="inciar_sesion_text">Iniciar sesion en AntojaTec</string>
-    <string name="Boton_registrarse_register_option">CONTINUAR CON TU EMAIL</string>
-    <string name="Boton_iniciar_sesion_register_option">CONTINUAR CON GOOGLE</string>
-    <string name="no_tienes_cuenta">¿No tienes cuenta? Registrate</string>
+    <!-- ===================== -->
+    <!-- Register Option -->
+    <!-- ===================== -->
+    <string name="login_text">Iniciar sesión en AntojaTEC</string>
+    <string name="button_register_option_email">Continuar con tu email</string>
+    <string name="button_register_option_google">Continuar con Google</string>
+    <string name="no_account">¿No tienes cuenta? Regístrate</string>
 
-    //register
-    <string name="Boton_crear_cuenta">CREAR CUENTA</string>
-    <string name="Nueva_cuenta">Nueva cuenta</string>
-    <string name="welcome_message2">Hello!</string>
+    <!-- ===================== -->
+    <!-- Register -->
+    <!-- ===================== -->
+    <string name="button_create_account">Crear cuenta</string>
+    <string name="new_account">Nueva cuenta</string>
+    <string name="welcome_message">¡Bienvenido a nuestra app!</string>
+    <string name="hello_message">¡Hola!</string>
 
-    <string name="welcome_message">Welcome to our app!</string>
-                <!-- En strings.xml -->
-    <string name="titulo_app">Mi Aplicación</string>
+    <!-- ===================== -->
+    <!-- Login Option -->
+    <!-- ===================== -->
+    <string name="register">Registrarme</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="login_now">Inicia sesión en AntojaTEC</string>
+    <string name="register_now">Registrarme en AntojaTEC</string>
+    <string name="forgot_password">Olvidé mi contraseña</string>
 
-    //login_option
-    <string name="iniciar_sesion_ahora">INICIAR SESION</string>
-    <string name="entrer">Nueva cuenta</string>
-    <string name="olvido_contraseña">OLVIDE MI CONTRASEÑA</string>
+    <!-- ===================== -->
+    <!-- Login -->
+    <!-- ===================== -->
+    <string name="register_login">Regístrate en AntojaTEC</string>
+    <string name="already_have_account">¿Ya tienes cuenta? Inicia sesión</string>
 
-    //login
-    <string name="registrar">Registrate en AntojaTec</string>
-    <string name="ya_tienes_cuenta">¿Ya tienes cuenta? Registrate</string>
-
-    //perfil
-    <string name="perfil">Perfil</string>
-    <string name="mi_cuenta">Mi cuenta</string>
+    <!-- ===================== -->
+    <!-- Perfil -->
+    <!-- ===================== -->
+    <string name="profile">Perfil</string>
+    <string name="my_account">Mi cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

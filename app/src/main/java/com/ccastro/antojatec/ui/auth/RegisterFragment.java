@@ -1,66 +1,80 @@
+// ui/login/RegisterFragment.java
 package com.ccastro.antojatec.ui.auth;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.ccastro.antojatec.R;
+import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RegisterFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class RegisterFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private AuthViewModel authViewModel;
+    private EditText etName, etLastNameMother, etLastNameFather, etEmail, etCellPhone,etPassword;
+    private Button btnRegister;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment RegisterFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static RegisterFragment newInstance(String param1, String param2) {
-        RegisterFragment fragment = new RegisterFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @SuppressLint("MissingInflatedId")
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        View root = inflater.inflate(R.layout.fragment_register, container, false);
+
+        // Variables del fragment.
+        etName = root.findViewById(R.id.inputName);
+        etLastNameFather = root.findViewById(R.id.inputLastNameFather);
+        etLastNameMother = root.findViewById(R.id.inputLastNameMother);
+        etEmail = root.findViewById(R.id.inputEmail);
+        etCellPhone = root.findViewById(R.id.inputCellPhone);
+        etPassword = root.findViewById(R.id.inputPassword);
+        btnRegister = root.findViewById(R.id.buttonRegister);
+
+        authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
+
+        btnRegister.setOnClickListener(v -> {
+            // Deshabilitamos el botón mientras se procesa el registro.
+            btnRegister.setEnabled(false);
+
+            String name = etName.getText().toString();
+            String lastNameFather = etLastNameFather.getText().toString();
+            String lastNameMother = etLastNameMother.getText().toString();
+            String email = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
+            String cellphone = etCellPhone.getText().toString();
+
+            // Validación para asegurarse que los campos no estén vacíos.
+            if (name.isEmpty() || lastNameFather.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(getContext(), "Completa todos los campos", Toast.LENGTH_SHORT).show();
+                btnRegister.setEnabled(true);
+                return;
+            }
+
+            // Registro con validación de usuario existente y no existente.
+            authViewModel.registerUser(name, lastNameFather, lastNameMother, email, cellphone, password)
+                    .observe(getViewLifecycleOwner(), success -> {
+                        if (success) {
+                            Toast.makeText(getContext(), "Registro exitoso", Toast.LENGTH_SHORT).show();
+                            NavHostFragment.findNavController(this)
+                                    .navigate(R.id.loginFragment);
+                        } else {
+                            Toast.makeText(getContext(), "El usuario ya existe", Toast.LENGTH_SHORT).show();
+                        }
+
+                        // Habilitamos el botón después del proceso
+                        btnRegister.setEnabled(true);
+                    });
+        });
+        return root;
     }
 }

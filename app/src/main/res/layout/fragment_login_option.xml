@@ -1,97 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="@dimen/padding_screen_horizontal"
-    android:paddingBottom="@dimen/padding_screen_vertical"
     android:paddingTop="@dimen/padding_screen_vertical"
-    tools:context="ui.auth.WelcomeFragment">
+    android:paddingBottom="@dimen/padding_screen_vertical"
+    tools:context="ui.auth.LoginOptionFragment">
 
-    <!-- Logo de la imagen -->
-
-    <!-- Eslogan  -->
-
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        style="@style/Image_Logo"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/img_logoapp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+    <!-- ícono de regreso (flecha) -->
+    <ImageButton
+        android:id="@+id/buttonBack"
+        style="@style/onBackButton"
+        android:layout_marginTop="@dimen/margin_null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        style="@style/Image_Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texto de registro -->
     <TextView
-        android:id="@+id/textViewSlogan"
-        style="@style/Text_H1"
-        android:gravity="center"
-        android:text="@string/inciar_sesion_text"
+        android:id="@+id/textViewLoginOptionTitle"
+        style="@style/Text_H2"
+        android:text="@string/login_now"
+        android:layout_marginTop="@dimen/margin_l"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilName"
-        style="@style/areasdetexto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/textViewSlogan"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo Electronico"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Apellido paterno -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLastNameFather"
-        style="@style/areasdetexto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@id/tilName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLastNameFather"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <!-- Botón de Registro con email -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonWelcomeRegister"
-        style="@style/ButtonPrimary"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_marginBottom="1dp"
-        android:text="@string/iniciar_sesion_ahora"
-        app:layout_constraintBottom_toTopOf="@id/buttonWelcomeLogin"
+        android:id="@+id/buttonLoginOptionEmail"
+        style="@style/Button_Fill"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:text="Continuar con mi email"
+        app:icon="@drawable/ic_email"
+        app:iconGravity="start"
+        app:iconSize="28dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toTopOf="@id/buttonLoginWithGoogle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Botón de login con Google -->
+    <!-- Botón de registro con Google -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonWelcomeLogin"
-        style="@style/ButtonOutlinedCustom"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_marginBottom="32dp"
-        android:text="@string/olvido_contraseña"
+        android:id="@+id/buttonLoginWithGoogle"
+        style="@style/Button_Outline"
+        android:layout_marginBottom="120dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:text="Continuar con Google"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="start"
+        app:iconSize="28dp"
+        app:iconTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Texto "¿Ya tienes una cuenta?" -->
+    <TextView
+        android:id="@+id/textViewAlreadyHaveAccount"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_m"
+        android:gravity="center"
+        android:text="¿No tienes cuenta?"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#A91212" />
+        app:layout_constraintTop_toBottomOf="@id/buttonLoginWithGoogle" />
+
+    <TextView
+        android:id="@+id/textViewSignInLink"
+        style="@style/Text_Body"
+        android:text="Regístrate"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAlreadyHaveAccount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

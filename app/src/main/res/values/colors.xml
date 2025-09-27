@@ -1,5 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Neutros existentes -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="near_black">#212121</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_medium">#CCCCCC</color>
+    <color name="gray_dark">#616161</color>
+
+    <!-- Brand / Primary -->
+    <color name="colorPrimary">#7F0092</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#E8B3F0</color>
+    <color name="colorOnPrimaryContainer">#210026</color>
+
+    <!-- Nuevos colores requeridos por el tema -->
+    <color name="mint_green">#00C897</color>
+    <color name="mint_green_soft_background">#D6FFF2</color>
+    <color name="cool_blue">#57B7CD</color>
+    <color name="cool_blue_nav_background">#CFEAF0</color>
+    <color name="onSurfaceVariant">#757575</color>
+    <color name="red">#F44336</color>
+    <color name="red_soft">#FFCDD2</color>
+    <color name="status_bar_color">#1976D2</color>
+
+    <!-- Ripple / efectos -->
+    <color name="colorRipple">#1F7F0092</color>
+    <color name="colorRippleSecondary">#1F57B7CD</color>
+    <color name="colorRippleNeutral">#1F000000</color>
+
 </resources>
