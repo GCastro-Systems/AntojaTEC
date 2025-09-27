@@ -14,11 +14,11 @@
 
         <action
             android:id="@+id/action_welcome_to_registerOption"
-            app:destination="@id/registerOptionFragment"/>
+            app:destination="@id/registerOptionFragment" />
 
         <action
             android:id="@+id/action_welcome_to_loginOption"
-            app:destination="@id/loginOptionFragment"/>
+            app:destination="@id/loginOptionFragment" />
     </fragment>
 
     <!-- Login Option Fragment -->
@@ -30,11 +30,11 @@
 
         <action
             android:id="@+id/action_loginOption_to_registerOption"
-            app:destination="@id/registerOptionFragment"/>
+            app:destination="@id/registerOptionFragment" />
 
         <action
             android:id="@+id/action_loginOption_to_login"
-            app:destination="@id/loginFragment"/>
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <!-- Register Option Fragment -->
@@ -46,11 +46,11 @@
 
         <action
             android:id="@+id/action_registerOption_to_register"
-            app:destination="@id/registerFragment"/>
+            app:destination="@id/registerFragment" />
 
         <action
             android:id="@+id/action_registerOption_to_loginOption"
-            app:destination="@id/loginOptionFragment"/>
+            app:destination="@id/loginOptionFragment" />
     </fragment>
 
     <!-- Register Fragment -->
@@ -62,7 +62,7 @@
 
         <action
             android:id="@+id/action_register_to_login"
-            app:destination="@id/loginFragment"/>
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <!-- Login Fragment -->
@@ -70,5 +70,5 @@
         android:id="@+id/loginFragment"
         android:name="com.ccastro.antojatec.ui.auth.LoginFragment"
         android:label="Login"
-        tools:layout="@layout/fragment_login"/>
+        tools:layout="@layout/fragment_login" />
 </navigation>

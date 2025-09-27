@@ -9,7 +9,7 @@
         android:id="@+id/userHomeFragment"
         android:name="com.ccastro.antojatec.ui.users.HomeFragment"
         android:label="Home Usuario"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
 
     <!-- Aquí puedes agregar más destinos: perfil, pedidos, etc -->
 </navigation>

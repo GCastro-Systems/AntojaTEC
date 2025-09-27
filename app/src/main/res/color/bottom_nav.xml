@@ -1,0 +1,8 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Activo -->
+    <item android:color="@color/colorPrimary" android:state_checked="true"/>
+    <!-- Presionado -->
+    <item android:color="@color/colorPrimaryContainer" android:state_pressed="true"/>
+    <!-- Inactivo -->
+    <item android:color="@color/gray_light"/>
+</selector>

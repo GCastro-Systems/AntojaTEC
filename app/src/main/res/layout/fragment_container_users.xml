@@ -1,25 +1,25 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- Contenedor de fragments internos -->
-    <fragment
+    <!-- Aquí va tu NavHostFragment -->
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_home"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        app:navGraph="@navigation/nav_graph_users"
-        app:defaultNavHost="false" />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph_users" />
 
-    <!-- BottomNavigationView fijo para todo el rol -->
+    <!-- BottomNavigation con estilo global -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_user"
+        style="@style/Widget.AntojaTEC.BottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/menu_users" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
