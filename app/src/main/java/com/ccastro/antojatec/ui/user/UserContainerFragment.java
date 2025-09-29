@@ -6,12 +6,14 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.ccastro.antojatec.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class UserContainerFragment extends Fragment {
 
@@ -25,22 +27,29 @@ public class UserContainerFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Obtén el NavController del NavHostFragment dentro de este container
+        // NavController del NavHostFragment del container
         NavHostFragment navHostFragment = (NavHostFragment)
                 getChildFragmentManager().findFragmentById(R.id.user_nav_host_fragment);
-        NavController navController = navHostFragment.getNavController();
 
-        // Manejo del botón back dentro de las views.
-        requireActivity().getOnBackPressedDispatcher().addCallback(
-                getViewLifecycleOwner(),
-                new OnBackPressedCallback(true) {
-                    @Override
-                    public void handleOnBackPressed() {
-                        if (!navController.popBackStack()) {
-                            setEnabled(false);
-                            requireActivity().onBackPressed();
+        if (navHostFragment != null) {
+            NavController navController = navHostFragment.getNavController();
+
+            // Conectar BottomNavigationView con NavController
+            BottomNavigationView bottomNav = view.findViewById(R.id.user_bottom_nav);
+            NavigationUI.setupWithNavController(bottomNav, navController);
+
+            // Manejo del botón back
+            requireActivity().getOnBackPressedDispatcher().addCallback(
+                    getViewLifecycleOwner(),
+                    new OnBackPressedCallback(true) {
+                        @Override
+                        public void handleOnBackPressed() {
+                            if (!navController.popBackStack()) {
+                                setEnabled(false);
+                                requireActivity().onBackPressed();
+                            }
                         }
-                    }
-                });
+                    });
+        }
     }
 }

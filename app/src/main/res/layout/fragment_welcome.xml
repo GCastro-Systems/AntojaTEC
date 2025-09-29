@@ -6,7 +6,7 @@
     android:paddingHorizontal="@dimen/padding_screen_horizontal"
     android:paddingTop="@dimen/padding_screen_vertical"
     android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context="com.ccastro.antojatec.ui.auth.WelcomeFragment">
+    tools:context="com.ccastro.antojatec.ui.auth.AuthWelcomeFragment">
 
     <!-- Logo -->
     <ImageView

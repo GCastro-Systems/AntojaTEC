@@ -1,4 +1,4 @@
-// ui/login/LoginFragment.java
+// ui/login/AuthLoginFragment.java
 package com.ccastro.antojatec.ui.auth;
 
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import com.ccastro.antojatec.R;
 import com.ccastro.antojatec.ui.user.UserContainerFragment;
 import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
-public class LoginFragment extends Fragment {
+public class AuthLoginFragment extends Fragment {
 
     private AuthViewModel authViewModel;
     private EditText etEmail, etPassword;

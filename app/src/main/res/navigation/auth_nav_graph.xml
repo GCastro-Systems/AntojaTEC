@@ -8,7 +8,7 @@
     <!-- Welcome Fragment -->
     <fragment
         android:id="@+id/fragment_welcome"
-        android:name="com.ccastro.antojatec.ui.auth.WelcomeFragment"
+        android:name="com.ccastro.antojatec.ui.auth.AuthWelcomeFragment"
         android:label="Welcome"
         tools:layout="@layout/fragment_welcome">
 
@@ -24,7 +24,7 @@
     <!-- Login Option Fragment -->
     <fragment
         android:id="@+id/loginOptionFragment"
-        android:name="com.ccastro.antojatec.ui.auth.LoginOptionFragment"
+        android:name="com.ccastro.antojatec.ui.auth.AuthLoginOptionFragment"
         android:label="LoginOption"
         tools:layout="@layout/fragment_login_option">
 
@@ -40,7 +40,7 @@
     <!-- Register Option Fragment -->
     <fragment
         android:id="@+id/registerOptionFragment"
-        android:name="com.ccastro.antojatec.ui.auth.RegisterOptionFragment"
+        android:name="com.ccastro.antojatec.ui.auth.AuthRegisterOptionFragment"
         android:label="RegisterOption"
         tools:layout="@layout/fragment_register_option">
 
@@ -56,7 +56,7 @@
     <!-- Register Fragment -->
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.ccastro.antojatec.ui.auth.RegisterFragment"
+        android:name="com.ccastro.antojatec.ui.auth.AuthRegisterFragment"
         android:label="Register"
         tools:layout="@layout/fragment_register">
 
@@ -68,7 +68,7 @@
     <!-- Login Fragment -->
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.ccastro.antojatec.ui.auth.LoginFragment"
+        android:name="com.ccastro.antojatec.ui.auth.AuthLoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" />
 </navigation>

@@ -12,7 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.ccastro.antojatec.R;
 
-public class RegisterOptionFragment extends Fragment {
+public class AuthRegisterOptionFragment extends Fragment {
 
     private Button buttonRegisterOption;
     private Button buttonRegisterWithGoogle;

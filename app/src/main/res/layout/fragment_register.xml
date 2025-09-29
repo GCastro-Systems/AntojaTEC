@@ -12,7 +12,7 @@
         android:paddingHorizontal="@dimen/padding_screen_horizontal"
         android:paddingTop="@dimen/padding_screen_vertical"
         android:paddingBottom="@dimen/padding_screen_vertical"
-        tools:context="ui.auth.RegisterFragment">
+        tools:context=".ui.auth.AuthRegisterFragment">
 
         <!-- ícono de regreso (flecha) -->
         <ImageButton
