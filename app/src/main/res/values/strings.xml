@@ -51,4 +51,22 @@
     <string name="my_account">Mi cuenta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="direcciones">Direcciones</string>
+    <string name="Boton_registrarse_pedidos_option">Pedidos</string>
+    <string name="Boton_registrarse_direcciones_option">Direcciones</string>
+    <string name="Boton_registrarse_pagos_option">Metodos de pagos</string>
+    <string name="Boton_registrarse_ayuda_option">Ayuda</string>
+    <string name="Boton_registrarse_sugerencias_option">Sugerencia</string>
+    <string name="Boton_registrarse_configuracion_option">Configuracion</string>
+    <string name="Boton_registrarse_notificaciones_option">Ayuda</string>
+    <string name="Boton_registrarse_informacion_option">Mas Informacion</string>
+    <string name="Boton_registrarse_vendedor_option">Quiero ser vendedor</string>
+    <string name="Boton_registrarse_condiciones_option">Terminos y condiciones</string>
+    <string name="Boton_registrarse_politica_option">Politica de privacidad</string>
+    <string name="Boton_registrarse_cerrarsesion_option">Cerrar sesion</string>
+    <string name="Boton_registrarse_inicio_option">Inicio</string>
+    <string name="Boton_registrarse_compras_option">Compras</string>
+    <string name="Boton_registrarse_comunidad_option">Comunidad</string>
+    <string name="Boton_registrarse_perfil_option">Perfil</string>
+
 </resources>
