@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userHomeFragment"
-        android:name="com.ccastro.antojatec.ui.users.HomeFragment"
+        android:name="com.ccastro.antojatec.ui.user.HomeFragment"
         android:label="Home Usuario"
         tools:layout="@layout/fragment_home" />
 

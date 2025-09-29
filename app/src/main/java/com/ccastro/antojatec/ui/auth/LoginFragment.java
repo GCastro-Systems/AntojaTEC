@@ -59,20 +59,7 @@ public class LoginFragment extends Fragment {
                 String fullName = user.getName() + " " + user.getLastNameFather() + " " + user.getLastNameMother();
                 Toast.makeText(getContext(), "Bienvenido " + fullName, Toast.LENGTH_SHORT).show();
 
-                // Preparar argumentos para el nuevo NavGraph
-                Bundle args = new Bundle();
-                args.putInt("userId", user.getId());
-                args.putString("fullName", fullName);
-
-                // Cambiar al nav_graph_users
-                NavHostFragment navHostFragment =
-                        (NavHostFragment) requireActivity().getSupportFragmentManager()
-                                .findFragmentById(R.id.nav_host_fragment);
-
-                if (navHostFragment != null) {
-                    NavController navController = navHostFragment.getNavController();
-                    navController.setGraph(R.navigation.nav_graph_users, args);
-                }
+                // Lógica para navegar a la pantalla de usuario
 
             } else {
                 Toast.makeText(getContext(), "Credenciales inválidas", Toast.LENGTH_SHORT).show();

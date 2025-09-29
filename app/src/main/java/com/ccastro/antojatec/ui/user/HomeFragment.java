@@ -1,4 +1,4 @@
-package com.ccastro.antojatec.ui.users;
+package com.ccastro.antojatec.ui.user;
 
 import android.os.Bundle;
 
