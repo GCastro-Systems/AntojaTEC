@@ -12,11 +12,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.ccastro.antojatec.R;
+import com.ccastro.antojatec.ui.user.UserContainerFragment;
 import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
 public class LoginFragment extends Fragment {
@@ -59,8 +59,16 @@ public class LoginFragment extends Fragment {
                 String fullName = user.getName() + " " + user.getLastNameFather() + " " + user.getLastNameMother();
                 Toast.makeText(getContext(), "Bienvenido " + fullName, Toast.LENGTH_SHORT).show();
 
-                // Lógica para navegar a la pantalla de usuario
+                // --- Redirección al flujo de usuario ---
+                FragmentManager fm = requireActivity().getSupportFragmentManager();
 
+                // Limpiar todo el back stack de Auth para que no pueda regresar
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+                // Reemplazar el AuthContainerFragment por UserContainerFragment
+                fm.beginTransaction()
+                        .replace(R.id.main_container, new UserContainerFragment())
+                        .commit();
             } else {
                 Toast.makeText(getContext(), "Credenciales inválidas", Toast.LENGTH_SHORT).show();
             }

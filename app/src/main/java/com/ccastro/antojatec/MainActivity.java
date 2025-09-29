@@ -3,7 +3,6 @@ package com.ccastro.antojatec;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.ccastro.antojatec.ui.auth.AuthContainerFragment;
-import com.ccastro.antojatec.ui.user.UserContainerFragment; // Para en un futuro desarrollo
 
 public class MainActivity extends AppCompatActivity {
 

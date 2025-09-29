@@ -40,12 +40,7 @@
         <!-- Botones -->
         <item name="materialButtonStyle">@style/Button_Fill</item>
         <item name="materialButtonOutlinedStyle">@style/Button_Outline</item>
-
-        <!-- Bottom nav -->
-        <item name="bottomNavigationStyle">@style/Widget.AntojaTEC.BottomNavigation</item>
     </style>
-
-
 
     <!-- Tema principal de la app -->
     <style name="Theme.AntojaTEC" parent="Base.Theme.AntojaTEC" />

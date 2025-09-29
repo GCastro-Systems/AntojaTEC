@@ -215,29 +215,44 @@
         <item name="android:paddingEnd">16dp</item>
     </style>
 
-    <!-- Bottom nav -->
-    <!-- Estilo de la burbuja activa -->
-    <style name="Widget.AntojaTEC.BottomNavigation.ActiveIndicator" parent="">
-        <item name="android:color">@color/colorPrimary</item> <!-- Color de la mancha -->
-        <item name="android:shape">rectangle</item> <!-- puede ser oval -->
-        <item name="android:insetLeft">8dp</item>
-        <item name="android:insetRight">8dp</item>
-        <item name="android:insetTop">4dp</item>
-        <item name="android:insetBottom">4dp</item>
-        <item name="android:radius">16dp</item> <!-- redondeo, prueba con 50% del alto -->
+    <!-- Active Indicator personalizado -->
+    <style name="BottomNavActiveIndicatorProfessional" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/colorPrimaryLight</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.BottomNavActiveIndicatorProfessional</item>
+        <item name="android:width">60dp</item>
+        <item name="android:height">32dp</item>
     </style>
 
-    <style name="Widget.AntojaTEC.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
-        <item name="itemIconTint">@color/bottom_nav</item>
-        <item name="itemTextColor">@color/bottom_nav</item>
+    <style name="ShapeAppearance.BottomNavActiveIndicatorProfessional" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- BottomNavigationView profesional -->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <!-- Fondo blanco absoluto -->
         <item name="android:background">@color/white</item>
-        <item name="android:elevation">8dp</item>
+        <item name="backgroundTint">@color/white</item>
 
-        <!-- Manchita estilo Google -->
-        <item name="itemActiveIndicatorStyle">@style/Widget.AntojaTEC.BottomNavigation.ActiveIndicator</item>
+        <!-- Iconos y texto -->
+        <item name="itemIconTint">@color/near_black</item>
+        <item name="itemTextColor">@color/near_black</item>
 
-        <!-- Efecto ripple al presionar -->
-        <item name="itemRippleColor">@color/colorPrimary</item>
+        <!-- Active Indicator -->
+        <item name="itemActiveIndicatorStyle">@style/BottomNavActiveIndicatorProfessional</item>
+
+        <!-- Ripple -->
+        <item name="itemRippleColor">@color/colorPrimaryLight</item>
+
+        <!-- Iconos y etiquetas -->
+        <item name="itemIconSize">28dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+
+        <!-- Altura y padding -->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+
+        <!-- Elevación opcional para sombra mínima -->
+        <item name="elevation">0dp</item>
     </style>
-
 </resources>
