@@ -218,17 +218,17 @@
     <!-- Active Indicator personalizado -->
     <style name="BottomNavActiveIndicatorProfessional" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/colorPrimaryLight</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.BottomNavActiveIndicatorProfessional</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceBottomNavActiveIndicator</item>
         <item name="android:width">60dp</item>
         <item name="android:height">32dp</item>
     </style>
 
-    <style name="ShapeAppearance.BottomNavActiveIndicatorProfessional" parent="ShapeAppearance.Material3.SmallComponent">
+    <style name="ShapeAppearanceBottomNavActiveIndicator" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerSize">50%</item>
     </style>
 
     <!-- BottomNavigationView profesional -->
-    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
         <!-- Fondo blanco absoluto -->
         <item name="android:background">@color/white</item>
         <item name="backgroundTint">@color/white</item>

@@ -19,5 +19,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/menu_users"
-        style="@style/Widget.App.BottomNavigationView"/>
+        style="@style/BottomNavigationView"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

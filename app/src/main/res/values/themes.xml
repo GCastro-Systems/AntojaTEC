@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
     <style name="Base.Theme.AntojaTEC" parent="Theme.Material3.Light.NoActionBar">
 
         <!-- Colores principales -->
@@ -44,5 +43,4 @@
 
     <!-- Tema principal de la app -->
     <style name="Theme.AntojaTEC" parent="Base.Theme.AntojaTEC" />
-
 </resources>
