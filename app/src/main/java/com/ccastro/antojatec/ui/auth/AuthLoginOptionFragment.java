@@ -12,10 +12,10 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.ccastro.antojatec.R;
 
-public class WelcomeFragment extends Fragment {
+public class AuthLoginOptionFragment extends Fragment {
 
-    private Button buttonRegister;
-    private Button buttonLogin;
+    private Button buttonLoginWithEmail;
+    private Button buttonLoginWithGoogle;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -23,22 +23,16 @@ public class WelcomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflar layout
-        View view = inflater.inflate(R.layout.fragment_welcome, container, false);
+        View view = inflater.inflate(R.layout.fragment_login_option, container, false);
 
         // Referenciar botón
-        buttonRegister = view.findViewById(R.id.btnWelcomeRegister);
-        buttonLogin = view.findViewById(R.id.btnWelcomeLogin);
+        buttonLoginWithEmail = view.findViewById(R.id.buttonLoginOptionEmail);
+        buttonLoginWithGoogle = view.findViewById(R.id.buttonLoginWithGoogle);
 
         // Navegación al fragment de registro
-        buttonRegister.setOnClickListener(v -> {
+        buttonLoginWithEmail.setOnClickListener(v -> {
             NavHostFragment.findNavController(this)
-                    .navigate(R.id.registerOptionFragment);
-        });
-
-        // Navegación al fragment de login
-        buttonLogin.setOnClickListener(v -> {
-            NavHostFragment.findNavController(this)
-                    .navigate(R.id.loginOptionFragment);
+                    .navigate(R.id.loginFragment);
         });
         return view;
     }

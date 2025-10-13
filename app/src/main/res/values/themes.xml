@@ -43,5 +43,4 @@
 
     <!-- Tema principal de la app -->
     <style name="Theme.AntojaTEC" parent="Base.Theme.AntojaTEC" />
-
 </resources>

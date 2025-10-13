@@ -1,4 +1,4 @@
-// ui/login/LoginFragment.java
+// ui/login/AuthLoginFragment.java
 package com.ccastro.antojatec.ui.auth;
 
 import android.os.Bundle;
@@ -12,14 +12,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.ccastro.antojatec.R;
+import com.ccastro.antojatec.ui.user.UserContainerFragment;
 import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
-public class LoginFragment extends Fragment {
+public class AuthLoginFragment extends Fragment {
 
     private AuthViewModel authViewModel;
     private EditText etEmail, etPassword;
@@ -59,21 +59,16 @@ public class LoginFragment extends Fragment {
                 String fullName = user.getName() + " " + user.getLastNameFather() + " " + user.getLastNameMother();
                 Toast.makeText(getContext(), "Bienvenido " + fullName, Toast.LENGTH_SHORT).show();
 
-                // Preparar argumentos para el nuevo NavGraph
-                Bundle args = new Bundle();
-                args.putInt("userId", user.getId());
-                args.putString("fullName", fullName);
+                // --- Redirección al flujo de usuario ---
+                FragmentManager fm = requireActivity().getSupportFragmentManager();
 
-                // Cambiar al nav_graph_users
-                NavHostFragment navHostFragment =
-                        (NavHostFragment) requireActivity().getSupportFragmentManager()
-                                .findFragmentById(R.id.nav_host_fragment);
+                // Limpiar todo el back stack de Auth para que no pueda regresar
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
-                if (navHostFragment != null) {
-                    NavController navController = navHostFragment.getNavController();
-                    navController.setGraph(R.navigation.nav_graph_users, args);
-                }
-
+                // Reemplazar el AuthContainerFragment por UserContainerFragment
+                fm.beginTransaction()
+                        .replace(R.id.main_container, new UserContainerFragment())
+                        .commit();
             } else {
                 Toast.makeText(getContext(), "Credenciales inválidas", Toast.LENGTH_SHORT).show();
             }

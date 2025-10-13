@@ -1,4 +1,4 @@
-// ui/login/RegisterFragment.java
+// ui/login/AuthRegisterFragment.java
 package com.ccastro.antojatec.ui.auth;
 
 import android.annotation.SuppressLint;
@@ -18,7 +18,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.ccastro.antojatec.R;
 import com.ccastro.antojatec.viewmodel.AuthViewModel;
 
-public class RegisterFragment extends Fragment {
+public class AuthRegisterFragment extends Fragment {
 
     private AuthViewModel authViewModel;
     private EditText etName, etLastNameMother, etLastNameFather, etEmail, etCellPhone,etPassword;

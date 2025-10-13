@@ -6,7 +6,7 @@
     android:paddingHorizontal="@dimen/padding_screen_horizontal"
     android:paddingTop="@dimen/padding_screen_vertical"
     android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context="ui.auth.LoginFragment">
+    tools:context=".ui.auth.AuthoginFragment">
 
     <!-- ícono de regreso (flecha) -->
     <ImageButton
@@ -21,16 +21,16 @@
         android:id="@+id/imageViewLogo"
         style="@style/Image_Logo"
         android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Texto de registro -->
     <TextView
         android:id="@+id/textViewLoginOptionTitle"
         style="@style/Text_H2"
-        android:text="¡Bienvenido!"
         android:layout_marginTop="@dimen/margin_m"
+        android:text="¡Bienvenido!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
@@ -53,9 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_form_s"
         android:hint="Correo electrónico"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginOptionDescription"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginOptionDescription">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputEmail"
@@ -73,9 +73,9 @@
         android:hint="Contraseña"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/inputLayoutEmail"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" >
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutEmail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPassword"

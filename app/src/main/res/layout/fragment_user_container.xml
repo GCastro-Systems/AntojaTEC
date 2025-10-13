@@ -4,22 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Contenedor de fragments internos -->
-    <fragment
-        android:id="@+id/nav_host_home"
+    <!-- NavHostFragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/user_nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:navGraph="@navigation/nav_graph_users"
-        app:defaultNavHost="false" />
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/user_nav_graph"/>
 
-    <!-- BottomNavigationView fijo para todo el rol -->
+    <!-- BottomNavigationView -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_user"
+        android:id="@+id/user_bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:menu="@menu/menu_users" />
-
+        app:menu="@menu/menu_users"
+        style="@style/BottomNavigationView"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

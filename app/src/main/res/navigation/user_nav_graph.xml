@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_user"
+    app:startDestination="@id/userHomeFragment">
+
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.ccastro.antojatec.ui.user.UserHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_user_home" />
+
+    <fragment
+        android:id="@+id/userShoppingFragment"
+        android:name="com.ccastro.antojatec.ui.user.UserShoppingFragment"
+        android:label="Shopping"
+        tools:layout="@layout/fragment_user_shopping" />
+
+    <fragment
+        android:id="@+id/userCommunityFragment"
+        android:name="com.ccastro.antojatec.ui.user.UserCommunityFragment"
+        android:label="Community"
+        tools:layout="@layout/fragment_user_community" />
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.ccastro.antojatec.ui.user.UserProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

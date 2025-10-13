@@ -1,6 +1,22 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.ccastro.antojatec.MainActivity">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/userHomeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/userShoppingFragment"
+        android:icon="@drawable/ic_shopping"
+        android:title="Pedidos" />
+
+    <item
+        android:id="@+id/userCommunityFragment"
+        android:icon="@drawable/ic_community"
+        android:title="Comunidad" />
+
+    <item
+        android:id="@+id/userProfileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="Perfil" />
 </menu>

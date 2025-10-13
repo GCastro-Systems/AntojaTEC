@@ -1,5 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,44 +6,44 @@
     android:paddingHorizontal="@dimen/padding_screen_horizontal"
     android:paddingTop="@dimen/padding_screen_vertical"
     android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context="com.ccastro.antojatec.ui.auth.WelcomeFragment">
+    tools:context="com.ccastro.antojatec.ui.auth.AuthWelcomeFragment">
 
     <!-- Logo -->
     <ImageView
         android:id="@+id/imageViewLogo"
         style="@style/Image_Logo"
         android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Eslogan -->
     <TextView
         android:id="@+id/textViewSlogan"
         style="@style/Text_H1"
-        android:text="@string/slogan_text"
         android:layout_marginTop="@dimen/margin_l"
-        app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+        android:text="@string/slogan_text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo" />
 
     <!-- Botón registro -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnWelcomeRegister"
         style="@style/Button_Fill"
-        android:text="@string/register"
         android:layout_marginBottom="@dimen/spacing_form_s"
+        android:text="@string/register"
         app:layout_constraintBottom_toTopOf="@id/btnWelcomeLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Botón login -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnWelcomeLogin"
         style="@style/Button_Outline"
-        android:text="@string/login"
         android:layout_marginBottom="@dimen/margin_l"
+        android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
