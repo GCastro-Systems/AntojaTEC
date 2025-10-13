@@ -140,7 +140,7 @@
         app:iconSize="32dp"
         app:iconTint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/perfil_perfil" />
 
@@ -240,74 +240,6 @@
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_condiciones_perfil" />
-
-    <TextView
-        android:id="@+id/bt_comunidad_perfil2"
-        style="boton_perfil_links"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="76dp"
-        android:drawableTop="@drawable/ic_persona"
-        android:drawablePadding="0dp"
-        android:gravity="bottom|center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/Boton_registrarse_perfil_option"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.348"
-        app:layout_constraintStart_toEndOf="@+id/bt_comunidad_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/bt_cerrarsesion_perfil" />
-
-    <TextView
-        android:id="@+id/bt_compras_perfil"
-        style="boton_perfil_links"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="76dp"
-        android:drawableTop="@drawable/ic_shop"
-        android:drawablePadding="0dp"
-        android:gravity="bottom|center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/Boton_registrarse_compras_option"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toEndOf="@+id/bt_inicio_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/bt_cerrarsesion_perfil" />
-
-    <TextView
-        android:id="@+id/bt_comunidad_perfil"
-        style="boton_perfil_links"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="76dp"
-        android:drawableTop="@drawable/ic_comunidad"
-        android:drawablePadding="0dp"
-        android:gravity="bottom|center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/Boton_registrarse_comunidad_option"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/bt_compras_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/bt_cerrarsesion_perfil" />
-
-    <TextView
-        android:id="@+id/bt_inicio_perfil"
-        style="boton_perfil_links"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="76dp"
-        android:drawableTop="@drawable/ic_home"
-        android:drawablePadding="0dp"
-        android:gravity="bottom|center_horizontal"
-        android:paddingBottom="5dp"
-        android:text="@string/Boton_registrarse_inicio_option"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_cerrarsesion_perfil" />
 
     <View
         android:id="@+id/linea1"

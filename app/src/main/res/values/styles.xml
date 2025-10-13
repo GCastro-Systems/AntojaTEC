@@ -215,4 +215,101 @@
         <item name="android:paddingStart">16dp</item>
         <item name="android:paddingEnd">16dp</item>
     </style>
+
+    <style name="Boton_perfiles" parent="Widget.Material3.Button.ElevatedButton">
+        <!-- Dimensiones -->
+        <item name="android:layout_width">0dp</item> <!-- Se estira con ConstraintLayout -->
+        <item name="android:layout_height">@dimen/button_height</item>
+
+        <!-- Fondo y texto -->
+        <item name="backgroundTint">#CFCFCF</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/Text_LabelLarge</item>
+        <item name="android:textAllCaps">false</item>
+
+        <!-- Forma y esquinas -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_Button</item>
+
+        <!-- Elevación -->
+        <item name="android:elevation">30dp</item>
+        <item name="elevation">6dp</item>
+
+
+
+        <!-- Ripple personalizado -->
+        <item name="rippleColor">@color/colorRipple</item>
+    </style>
+    <style name="CustomTextInputLayout2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/white</item>
+
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+
+        <item name="hintTextColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/black</item>
+
+        <item name="hintAnimationEnabled">true</item>
+
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_Button</item>
+
+        <!-- 👇 valor correcto -->
+        <item name="boxBackgroundMode">outlined</item>
+
+        <item name="startIconTint">@color/colorPrimary</item>
+        <item name="endIconTint">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="Button_Fill_home2" parent="Widget.Material3.Button.ElevatedButton">
+        <!-- Dimensiones -->
+        <item name="android:layout_width">0dp</item> <!-- Se estira con ConstraintLayout -->
+        <item name="android:layout_height">@dimen/button_height</item>
+
+        <!-- Fondo y texto -->
+        <item name="backgroundTint">#FFFFFF</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/Text_LabelLarge</item>
+        <item name="android:textAllCaps">false</item>
+
+        <!-- Forma y esquinas -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_Button</item>
+
+        <!-- Elevación -->
+        <item name="android:elevation">6dp</item>
+        <item name="elevation">6dp</item>
+
+        <!-- Opcional: ícono a la izquierda -->
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/spacing_form_s</item>
+
+        <!-- Ripple personalizado -->
+        <item name="rippleColor">@color/colorRipple</item>
+    </style>
+
+    <style name="Button_Fill_home3" parent="Widget.Material3.Button.ElevatedButton">
+        <!-- Dimensiones -->
+        <item name="android:layout_width">0dp</item> <!-- Se estira con ConstraintLayout -->
+        <item name="android:layout_height">@dimen/button_height</item>
+
+        <!-- Fondo y texto -->
+        <item name="backgroundTint">#D0D0D0</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/Text_LabelLarge</item>
+        <item name="android:textAllCaps">false</item>
+
+        <!-- Forma y esquinas -->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_Button</item>
+
+        <!-- Elevación -->
+        <item name="android:elevation">6dp</item>
+        <item name="elevation">6dp</item>
+
+        <!-- Opcional: ícono a la izquierda -->
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/spacing_form_s</item>
+
+        <!-- Ripple personalizado -->
+        <item name="rippleColor">@color/colorRipple</item>
+    </style>
 </resources>

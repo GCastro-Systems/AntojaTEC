@@ -67,5 +67,16 @@
     <string name="Boton_registrarse_compras_option">Compras</string>
     <string name="Boton_registrarse_comunidad_option">Comunidad</string>
     <string name="Boton_registrarse_perfil_option">Perfil</string>
+    <string name="edificio_e_aula_5">Edificio E, aula 5</string>
+    <string name="Todo_home">Todo</string>
+    <string name="express">Express</string>
+    <string name="vendedores_destacados">Vendedores destacados</string>
+    <string name="en_tendencia">En tendencia</string>
+    <string name="promociones">Promociones</string>
+    <string name="compras">Compras</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="mis_compras">Mis compras</string>
+    <string name="agrega_antojos_y_comienza_a_llenar_tu_carrito_de_compra">¡Agrega antojos y comienza a llenar tu carrito de compra!</string>
+    <string name="compras_recientes">Compras recientes</string>
 
 </resources>

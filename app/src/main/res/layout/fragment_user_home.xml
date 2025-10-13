@@ -1,13 +1,186 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.user.UserHomeFragment">
+    android:paddingHorizontal="@dimen/padding_screen_horizontal"
+    android:paddingTop="@dimen/padding_screen_vertical"
+    android:paddingBottom="@dimen/padding_screen_vertical"
+    tools:context=".ui.auth.AuthoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
+
+    <!-- Texto de registro -->
+
+    <!-- Input de correo electrónico -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Esto es el home de usuarios" />
-</FrameLayout>
+        android:id="@+id/arrow_promociones"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aroorw_entendencia"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_user_home_edificio"
+        style="@style/Text_Body"
+        android:drawableEnd="@drawable/ic_arrowdown"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/edificio_e_aula_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_user_home_vendedoresdestacados"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableEnd="@drawable/ic_star"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/vendedores_destacados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todo_home" />
+
+    <TextView
+        android:id="@+id/text_user_home_entendencia"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:drawableEnd="@drawable/ic_fire"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/en_tendencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_home_vendedoresdestacados" />
+
+    <TextView
+        android:id="@+id/text_user_home_promociones"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:drawableEnd="@drawable/ic_discount"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/promociones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_home_entendencia" />
+
+    <TextView
+        android:id="@+id/bell_img"
+        style="@style/Text_Body"
+        android:drawableEnd="@drawable/ic_bell"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/arrow_vendedoresdestacados"
+        style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputbuscar_home"
+        style="@style/CustomTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="       ¿Qué se te antoja hoy?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_user_home_edificio"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconMode="custom"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEmail"
+            style="@style/InputFill"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/todo_home"
+        style="@style/Button_Fill_home2"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/spacing_form_l"
+        android:text="@string/Todo_home"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_shopingbasket"
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputbuscar_home"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/todo_home2"
+        style="@style/Button_Fill_home2"
+        android:layout_width="119dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/spacing_form_l"
+        android:text="@string/express"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_express"
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputbuscar_home"
+        app:layout_constraintVertical_bias="0.002" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
