@@ -29,6 +29,7 @@
     <!-- Buttons -->
     <dimen name="spacing_button_top">24dp</dimen>
     <dimen name="button_height">65dp</dimen>
+    <dimen name="button_height_small">40dp</dimen>
     <dimen name="button_width">365dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
 
