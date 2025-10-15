@@ -6,71 +6,68 @@
 
     <!-- Eslogan y encabezados -->
     <style name="Text_H1">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">24sp</item> <!-- más compacto que 30sp -->
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineLarge</item>
     </style>
 
     <style name="Text_H2">
-        <item name="android:textSize">26sp</item>
+        <item name="android:textSize">20sp</item> <!-- ligeramente más grande que H3 -->
         <item name="android:textColor">@color/near_black</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineMedium</item>
+    </style>
+
+    <style name="Text_H3">
+        <item name="android:textSize">16sp</item> <!-- para títulos de cards o secciones -->
+        <item name="android:textColor">@color/near_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineSmall</item>
     </style>
 
     <!-- Texto general (cuerpo) -->
     <style name="Text_Body">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/near_black</item>
         <item name="android:lineSpacingExtra">2dp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.BodyMedium</item>
     </style>
 
     <!-- Etiquetas grandes (para botones, inputs, etc.) -->
     <style name="Text_LabelLarge">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/near_black</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.LabelLarge</item>
     </style>
 
     <!-- Etiquetas pequeñas (ej: hints o notas) -->
     <style name="Text_LabelSmall">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.LabelSmall</item>
     </style>
 
+    <!-- Links o botones de texto -->
     <style name="Text_Link" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingStart">0dp</item>
         <item name="android:paddingEnd">0dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
-        <item name="android:minHeight">48dp</item> <!-- Garantiza altura mínima de 48dp -->
+        <item name="android:minHeight">48dp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:gravity">center</item>
-
-        <!-- Para que sea clickeable con ripple -->
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
+
 
 
     <!-- ===================== -->
@@ -255,4 +252,52 @@
         <!-- Elevación opcional para sombra mínima -->
         <item name="elevation">0dp</item>
     </style>
+
+    <!-- Estilo para la barra de búsqueda -->
+    <style name="SearchBarStyle" parent="Widget.Material3.TextInputLayout.FilledBox.Dense">
+        <!-- Fondo y bordes -->
+        <item name="boxBackgroundColor">@color/gray_light</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+
+        <!-- Íconos -->
+        <item name="startIconDrawable">@drawable/ic_search</item>
+        <!--<item name="endIconDrawable">@drawable/ic_search</item>-->
+        <item name="startIconTint">@color/gray_dark</item>
+        <item name="endIconTint">@color/gray_dark</item>
+
+        <!-- Texto y fondo -->
+        <item name="hintTextColor">@color/gray_dark</item>
+        <item name="android:textColorHint">@color/gray_dark</item>
+        <item name="android:textColor">@color/near_black</item>
+        <item name="android:background">@null</item>
+
+        <!-- Tamaño y modo -->
+        <item name="android:layout_height">60dp</item>
+        <item name="boxBackgroundMode">filled</item>
+
+        <!-- Apariencia -->
+    </style>
+
+    <!-- Estilo para el campo de texto -->
+    <style name="SearchInputTextStyle" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/near_black</item>
+        <item name="android:textColorHint">@color/gray_dark</item>
+
+        <!-- Padding ajustado para íconos -->
+        <item name="android:paddingStart">48dp</item>
+        <!--<item name="android:paddingEnd">16dp</item>-->
+
+        <!-- Fondo transparente para evitar solapamiento -->
+        <item name="android:background">@null</item>
+    </style>
+
+
 </resources>

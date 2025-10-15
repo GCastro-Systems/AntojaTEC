@@ -1,18 +1,23 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_home"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding_screen_horizontal"
+    android:paddingEnd="@dimen/padding_screen_horizontal"
+    android:paddingTop="@dimen/padding_screen_vertical_top"
+    android:paddingBottom="@dimen/padding_screen_vertical_bottom">
 
-    <!-- NavHostFragment -->
+    <!-- Contenedor principal de fragments -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/user_nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:navGraph="@navigation/user_nav_graph"/>
+        app:navGraph="@navigation/user_nav_graph" />
 
-    <!-- BottomNavigationView -->
+    <!-- Barra de navegación inferior -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/user_bottom_nav"
         android:layout_width="match_parent"

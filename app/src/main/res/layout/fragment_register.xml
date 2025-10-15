@@ -10,8 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/padding_screen_horizontal"
-        android:paddingTop="@dimen/padding_screen_vertical"
-        android:paddingBottom="@dimen/padding_screen_vertical"
+        android:paddingStart="@dimen/auth_padding_screen_horizontal"
+        android:paddingEnd="@dimen/auth_padding_screen_horizontal"
+        android:paddingTop="@dimen/padding_screen_vertical_top"
+        android:paddingBottom="@dimen/auth_padding_screen_vertical_bottom"
         tools:context=".ui.auth.AuthRegisterFragment">
 
         <!-- ícono de regreso (flecha) -->
@@ -33,6 +35,8 @@
         <TextView
             android:id="@+id/textViewRegisterTitle"
             style="@style/Text_H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_form_m"
             android:text="Nueva cuenta"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +46,8 @@
         <TextView
             android:id="@+id/textViewRegisterDescription"
             style="@style/Text_Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_form_s"
             android:gravity="center"
             android:text="Llena el siguiente formulario con tus datos personales. Crea una contraseña y registra una cuenta de correo electrónico. "

@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/padding_screen_horizontal"
-    android:paddingTop="@dimen/padding_screen_vertical"
-    android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context=".ui.auth.AuthoginFragment">
+    android:paddingStart="@dimen/auth_padding_screen_horizontal"
+    android:paddingEnd="@dimen/auth_padding_screen_horizontal"
+    android:paddingTop="@dimen/padding_screen_vertical_top"
+    android:paddingBottom="@dimen/auth_padding_screen_vertical_bottom"
+    tools:context=".ui.auth.AuthLoginFragment">
 
     <!-- ícono de regreso (flecha) -->
     <ImageButton
@@ -29,6 +30,8 @@
     <TextView
         android:id="@+id/textViewLoginOptionTitle"
         style="@style/Text_H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_m"
         android:text="¡Bienvenido!"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +42,8 @@
     <TextView
         android:id="@+id/textViewLoginOptionDescription"
         style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xl"
         android:text="Inicia sesión"
         app:layout_constraintEnd_toEndOf="parent"
