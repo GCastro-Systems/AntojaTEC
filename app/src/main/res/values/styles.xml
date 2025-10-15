@@ -16,7 +16,7 @@
     <style name="Text_H2">
         <item name="android:textSize">20sp</item> <!-- ligeramente más grande que H3 -->
         <item name="android:textColor">@color/near_black</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineMedium</item>
     </style>
 
