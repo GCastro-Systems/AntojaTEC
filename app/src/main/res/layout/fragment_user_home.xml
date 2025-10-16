@@ -1,186 +1,285 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/padding_screen_horizontal"
-    android:paddingTop="@dimen/padding_screen_vertical"
-    android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context=".ui.auth.AuthoginFragment">
+    android:fillViewport="true">
 
-
-
-    <!-- Texto de registro -->
-
-    <!-- Input de correo electrónico -->
-
-    <TextView
-        android:id="@+id/arrow_promociones"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_mainContent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:drawableEnd="@drawable/ic_right_arrow"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingStart="@dimen/padding_screen_horizontal"
+        android:paddingTop="@dimen/padding_screen_vertical_top"
+        android:paddingEnd="@dimen/padding_screen_horizontal"
+        android:paddingBottom="@dimen/padding_screen_vertical_bottom">
 
-    <TextView
-        android:id="@+id/aroorw_entendencia"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
-        android:drawableEnd="@drawable/ic_right_arrow"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/text_user_home_edificio"
-        style="@style/Text_Body"
-        android:drawableEnd="@drawable/ic_arrowdown"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="@string/edificio_e_aula_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView_screenTitle"
+                style="@style/Text_Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:importantForAccessibility="yes"
+                android:singleLine="true"
+                android:text="Edificio E, Aula 4 >" />
 
-    <TextView
-        android:id="@+id/text_user_home_vendedoresdestacados"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:drawableEnd="@drawable/ic_star"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="@string/vendedores_destacados"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todo_home" />
 
-    <TextView
-        android:id="@+id/text_user_home_entendencia"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:drawableEnd="@drawable/ic_fire"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="@string/en_tendencia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_home_vendedoresdestacados" />
+            <ImageView
+                android:id="@+id/imageView_notification"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:contentDescription="Notificaciones"
+                android:src="@drawable/ic_notification"
+                app:tint="@color/colorPrimary" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_user_home_promociones"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:drawableEnd="@drawable/ic_discount"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="@string/promociones"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_home_entendencia" />
 
-    <TextView
-        android:id="@+id/bell_img"
-        style="@style/Text_Body"
-        android:drawableEnd="@drawable/ic_bell"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!-- Barra de búsqueda -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SearchBarStyle"
+            style="@style/SearchBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="¿Qué se te antoja hoy?"
+            app:endIconTint="@color/gray_dark"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:startIconDrawable="@drawable/ic_search"
+            app:startIconTint="@color/gray_dark">
 
-    <TextView
-        android:id="@+id/arrow_vendedoresdestacados"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:drawableEnd="@drawable/ic_right_arrow"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/SearchInputTextStyle"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputbuscar_home"
-        style="@style/CustomTextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="       ¿Qué se te antoja hoy?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_user_home_edificio"
-        app:startIconDrawable="@drawable/ic_search"
-        app:startIconMode="custom"
-        app:startIconTint="@color/black">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputEmail"
-            style="@style/InputFill"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/headerHola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/SearchBarStyle"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/todo_home"
-        style="@style/Button_Fill_home2"
-        android:layout_width="115dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="@dimen/spacing_form_l"
-        android:text="@string/Todo_home"
-        android:textSize="12sp"
-        app:icon="@drawable/ic_shopingbasket"
-        app:iconGravity="textStart"
-        app:iconPadding="6dp"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputbuscar_home"
-        app:layout_constraintVertical_bias="0.002" />
+            <!-- Botón "Todo" -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_todo"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Todo"
+                android:textSize="12sp"
+                android:textColor="@color/near_black"
+                android:backgroundTint="@color/gray_light"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_shopping"
+                app:iconTint="@color/red"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/todo_home2"
-        style="@style/Button_Fill_home2"
-        android:layout_width="119dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="@dimen/spacing_form_l"
-        android:text="@string/express"
-        android:textSize="12sp"
-        app:icon="@drawable/ic_express"
-        app:iconGravity="textStart"
-        app:iconPadding="6dp"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputbuscar_home"
-        app:layout_constraintVertical_bias="0.002" />
+            <!-- Botón "Express" -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_express"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:text="Express"
+                android:textSize="12sp"
+                android:textColor="@color/near_black"
+                android:backgroundTint="@color/white"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_shopping_fast"
+                app:iconTint="@color/red"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Título de sección -->
+        <TextView
+            android:id="@+id/textView_popularServicesTitle"
+            style="@style/Text_H2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginEnd="@dimen/margin_s"
+            android:gravity="start"
+            android:text="Vendedores destacados"
+            app:layout_constraintEnd_toStartOf="@id/imageView_arrow2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerHola" />
+
+        <ImageView
+            android:id="@+id/imageView_arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:contentDescription="..."
+            android:src="@drawable/ic_arrow_right"
+
+            app:layout_constraintBottom_toBottomOf="@id/textView_popularServicesTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="@id/textView_popularServicesTitle"
+            app:tint="@color/black" />
+
+        <!-- Carrusel de tarjetas dentro de la sección-->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView_popularServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_s"
+            android:layout_marginBottom="@dimen/margin_s"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_popularServicesTitle">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_popularServiceCardsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/Card_Seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="12dp">
+
+                        <!-- Encabezado -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFF9F9"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingVertical="16dp">
+
+                            <ImageView
+                                android:id="@+id/iv_logo"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:contentDescription="@string/app_name"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/logo_antojatec" />
+                        </LinearLayout>
+
+                        <!-- Nombre -->
+                        <TextView
+                            android:id="@+id/tv_owner_name"
+                            style="@style/Text_H3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="12dp"
+                            android:paddingTop="8dp"
+                            android:text="Juan Salazar Rivera" />
+
+                        <!-- Info -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+                            android:paddingTop="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:text="Costo de envío: $30"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="4dp"
+                                android:text="•"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:text="5 min"
+                                android:textColor="#757575"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <!-- Calificación -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+                            android:paddingTop="4dp">
+
+                            <TextView
+                                style="@style/Text_Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.2" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="4dp"
+                                android:contentDescription="..."
+                                android:src="@drawable/ic_star"
+                                app:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/Text_Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(+120)" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Aquí puedes agregar más CardViews con layout_marginEnd para separación -->
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -7,9 +7,15 @@
     <dimen name="margin_l">24dp</dimen>
     <dimen name="margin_xl">32dp</dimen>
 
+    <!-- Screen Paddings Auth -->
+    <dimen name="auth_padding_screen_horizontal">24dp</dimen>
+    <dimen name="auth_padding_screen_vertical_bottom">24dp</dimen>
+
     <!-- Screen paddings -->
-    <dimen name="padding_screen_horizontal">32dp</dimen>
-    <dimen name="padding_screen_vertical">52dp</dimen>
+    <dimen name="padding_screen_horizontal">10dp</dimen>
+    <dimen name="padding_screen_vertical_top">24dp</dimen>
+    <dimen name="padding_screen_vertical_bottom">0dp</dimen>
+
 
     <!-- Inset paddings -->
     <dimen name="padding_icon_inside">5dp</dimen>
@@ -23,6 +29,7 @@
     <!-- Buttons -->
     <dimen name="spacing_button_top">24dp</dimen>
     <dimen name="button_height">65dp</dimen>
+    <dimen name="button_height_small">40dp</dimen>
     <dimen name="button_width">365dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
 

@@ -1,158 +1,128 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/padding_screen_horizontal"
-    android:paddingTop="@dimen/padding_screen_vertical"
-    android:paddingBottom="@dimen/padding_screen_vertical"
-    tools:context=".ui.auth.AuthoginFragment">
+    android:fillViewport="true">
 
-
-
-    <!-- Texto de registro -->
-
-    <!-- Input de correo electrónico -->
-
-
-    <TextView
-        android:id="@+id/text_user_shopping_compras"
-        style="@style/Text_Body"
-        android:layout_marginTop="4dp"
-        android:gravity="center_vertical"
-        android:text="@string/compras"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mis_compras_shopping"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_mainContent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center_vertical"
-        android:text="@string/mis_compras"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_user_shopping_compras" />
+        android:paddingStart="@dimen/padding_screen_horizontal"
+        android:paddingTop="@dimen/padding_screen_vertical_top"
+        android:paddingEnd="@dimen/padding_screen_horizontal"
+        android:paddingBottom="@dimen/padding_screen_vertical_bottom">
 
-    <TextView
-        android:id="@+id/mis_compras_shopping4"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:gravity="center_vertical"
-        android:text="@string/compras_recientes"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
-    <TextView
-        android:id="@+id/mis_compras_shopping2"
-        style="@style/Text_Body"
-        android:layout_width="243dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center_vertical"
-        android:text="@string/agrega_antojos_y_comienza_a_llenar_tu_carrito_de_compra"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_shopping" />
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/mis_compras_shopping3"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:lineSpacingExtra="2dp"
-        android:maxWidth="260dp"
-        android:text="Todos los antojos que selecciones aparecerán aquí"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mis_compras_shopping2" />
+            <!-- Título a la izquierda -->
+            <TextView
+                android:id="@+id/textView_screenTitle"
+                style="@style/Text_H1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:importantForAccessibility="yes"
+                android:text="Compras"/>
 
-    <TextView
-        android:id="@+id/mis_compras_shopping5"
-        style="@style/Text_Body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:lineSpacingExtra="2dp"
-        android:maxWidth="260dp"
-        android:text="Los detalles de tus compras recientes aparecerán aquí"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_box" />
+            <!-- Botón Historial centrado verticalmente -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_todo"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Historial"
+                android:textSize="12sp"
+                android:textColor="@color/near_black"
+                android:backgroundTint="@color/gray_light"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_history"
+                app:iconTint="@color/gray_dark"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/gray_dark"
+                app:strokeWidth="1dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+        </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/pedidos_shopping"
-        style="@style/Button_Fill_home3"
-        android:layout_width="94dp"
-        android:layout_height="48dp"
-        android:text="@string/pedidos"
-        android:textSize="11sp"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.913"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/image_shopping"
-        style="@style/Image_Logo"
-        android:layout_width="172dp"
-        android:layout_height="175dp"
-        android:layout_marginTop="24dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/carrito"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mis_compras_shopping" />
+        <TextView
+            android:id="@+id/textView_popularServicesTitle"
+            style="@style/Text_H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_s"
+            android:text="Mis compras"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"/>
 
-    <ImageView
-        android:id="@+id/image_box"
-        style="@style/Image_Logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            style="@style/Image_Register"
+            android:src="@drawable/img_shopping"
+            android:layout_marginTop="@dimen/margin_s"
+            app:layout_constraintTop_toBottomOf="@id/textView_popularServicesTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        android:layout_marginTop="16dp"
-        android:src="@drawable/box"
-        app:layout_constraintTop_toBottomOf="@+id/mis_compras_shopping4"
-        tools:layout_editor_absoluteX="91dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/hint"
+            style="@style/Text_LabelSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_l"
+            android:text="No hay ningún pedido en curso"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewLogo"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonRegister"
-        style="@style/Button_Fill"
-        android:layout_width="150dp"
-        android:layout_height="50"
-        android:text="Comprar"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mis_compras_shopping3"
-        app:layout_constraintVertical_bias="0.038" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView_ComprasRecientes"
+            style="@style/Text_H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_m"
+            android:text="Compras recientes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hint"/>
+
+        <ImageView
+            android:id="@+id/imageViewLogo2"
+            style="@style/Image_Register"
+            android:src="@drawable/img_shopping_box"
+            android:layout_marginTop="@dimen/margin_s"
+            app:layout_constraintTop_toBottomOf="@id/textView_ComprasRecientes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/hint2"
+            style="@style/Text_LabelSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_l"
+            android:text="No hay compras recientes para mostrar"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewLogo2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

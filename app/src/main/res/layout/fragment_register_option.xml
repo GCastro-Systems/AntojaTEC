@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/padding_screen_horizontal"
-    android:paddingTop="@dimen/padding_screen_vertical"
-    android:paddingBottom="@dimen/padding_screen_vertical"
+    android:paddingStart="@dimen/auth_padding_screen_horizontal"
+    android:paddingEnd="@dimen/auth_padding_screen_horizontal"
+    android:paddingTop="@dimen/padding_screen_vertical_top"
+    android:paddingBottom="@dimen/auth_padding_screen_vertical_bottom"
     tools:context=".ui.auth.AuthLoginOptionFragment">
 
     <!-- ícono de regreso (flecha) -->
@@ -29,6 +30,8 @@
     <TextView
         android:id="@+id/textViewLoginOptionTitle"
         style="@style/Text_H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_l"
         android:text="@string/register_now"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +75,9 @@
     <TextView
         android:id="@+id/textViewAlreadyHaveAccount"
         style="@style/Text_Body"
-        android:layout_marginTop="@dimen/margin_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_l"
         android:text="¿Ya tienes una cuenta?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +86,8 @@
     <TextView
         android:id="@+id/textViewSignInLink"
         style="@style/Text_Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Inicia sesión"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
